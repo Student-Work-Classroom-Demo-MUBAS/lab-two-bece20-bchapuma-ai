@@ -1,0 +1,38 @@
+/*body {
+    background-color:lightyellow;
+}*/
+
+/* CLASS selector — targets any element with class="highlight" */
+/* You can apply the same class to multiple elements */
+.highlight {
+ background-color: #FBEFD3;
+ padding: 8px;
+}
+/* ID selector — targets the ONE element with id="intro" */
+/* IDs must be unique — only use each ID once per page */
+#intro {
+ font-size: 22px;
+ font-weight: bold;
+}
+
+/* CLASS selector 'important' — targets any element with class="important" */
+.important {
+    font-weight: bold;
+    color: red;
+}
+
+#page-header {
+    background-color: lightblue;
+    padding: 10px;
+    text-align: center;
+}
+
+
+/* 2. Hexadecimal — most common in professional CSS */
+/* Format: #RRGGBB where RR/GG/BB are 00-FF in hex */
+.color-hex { color: #1E2761; } /* MUBAS Navy */
+.color-hex2 { color: #0D9488; } /* MUBAS Teal */
+
+
+
+
