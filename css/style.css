@@ -1,6 +1,6 @@
 body {
 /* font-family: always list fallbacks separated by commas */
-font-family: 'Poppins', Arial, sans-serif;
+font-family: 'Playfair Display', Arial, sans-serif;
 /* font-size: use rem for accessibility (1rem = 16px default) */
 font-size: 1rem; /* = 16px */
 /* line-height: spacing between lines, no unit needed */
@@ -9,7 +9,7 @@ line-height: 1.6; /* 60% more than font size = readable */
 color: #1A1A2E;
 }
 h1, h2, h3 {
-font-family: 'Merriweather', Georgia, serif;
+font-family: 'Montserrat', Georgia, serif;
 font-weight: 700; /* bold */
 line-height: 1.2; /* tighter for headings */
 }
@@ -56,7 +56,9 @@ max-width: 600px;
     padding: 10px;
     text-align: center;
     color: #F5F5F5;
+    letter-spacing: 0.1em;
 }
+
 
 
 
