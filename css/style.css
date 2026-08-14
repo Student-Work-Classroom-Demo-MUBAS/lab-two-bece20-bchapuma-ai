@@ -1,5 +1,34 @@
 body {
-    background-color:#92EEFF;
+/* font-family: always list fallbacks separated by commas */
+font-family: 'Poppins', Arial, sans-serif;
+/* font-size: use rem for accessibility (1rem = 16px default) */
+font-size: 1rem; /* = 16px */
+/* line-height: spacing between lines, no unit needed */
+line-height: 1.6; /* 60% more than font size = readable */
+/* color: the text color */
+color: #1A1A2E;
+}
+h1, h2, h3 {
+font-family: 'Merriweather', Georgia, serif;
+font-weight: 700; /* bold */
+line-height: 1.2; /* tighter for headings */
+}
+.subtitle {
+font-size: 1.25rem; /* 20px */
+font-weight: 400; /* normal */
+font-style: italic;
+text-align: center;
+color: #5B6478; /* grey */
+letter-spacing: 0.05em; /* slightly spaced out */
+}
+blockquote {
+font-size: 1.1rem;
+text-align: center;
+color: #0D9488;
+border-left: 4px solid #D4A017;
+padding-left: 1.5rem;
+margin: 2rem auto;
+max-width: 600px;
 }
 
 /* CLASS selector — targets any element with class="highlight" */
