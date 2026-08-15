@@ -1,0 +1,235 @@
+/*
+  Tribute Page — ELE-IWS-521 Lesson 2 Lab
+  Student: Ben Chapuma
+  ID: BECE/20/SS/003
+  Subject: Ngwazi Dr. Hastings Kamuzu Banda, first President of Malawi
+*/
+
+/* ---------- Design tokens ---------- */
+:root {
+  --paper: #F4EFE3;      /* parchment background */
+  --ink: #17140F;        /* near-black text */
+  --stone: #6B6459;      /* muted secondary text */
+  --lion-green: #0B6E4F; /* Malawi flag green */
+  --lion-red: #C81D25;   /* Malawi flag red / rising sun */
+  --line: #D9CFB8;       /* hairline rule on parchment */
+
+  --font-display: "Spectral", Georgia, serif;
+  --font-body: "Source Serif 4", Georgia, serif;
+  --font-mono: "IBM Plex Mono", "Courier New", monospace;
+}
+
+/* ---------- Base / element selectors ---------- */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background-color: var(--paper);
+  background-image: radial-gradient(circle at 50% 0%, #FAF7EE 0%, var(--paper) 65%);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+h1, h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--ink);
+  margin: 0;
+}
+
+h1 {
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+}
+
+h2 {
+  font-size: 1.6rem;
+  letter-spacing: 0.01em;
+  margin-bottom: 1rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 48px;
+  height: 3px;
+  background: var(--lion-green);
+}
+
+p { margin: 0 0 1rem 0; }
+
+a {
+  color: var(--lion-green);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 3px;
+}
+
+a:hover { color: var(--lion-red); }
+
+ol { margin: 0; padding: 0; list-style: none; }
+
+img { max-width: 100%; display: block; }
+
+/* ---------- ID selectors ---------- */
+#hero {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 4.5rem 1.5rem 3rem;
+  text-align: center;
+}
+
+#hero .dates {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  color: var(--stone);
+  margin-top: 1rem;
+}
+
+#banda-quote {
+  max-width: 640px;
+  margin: 4rem auto;
+  padding: 0 1.5rem;
+  text-align: center;
+  border: none;
+}
+
+#banda-quote p {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.7rem;
+  line-height: 1.4;
+  color: var(--lion-green);
+  margin-bottom: 0.75rem;
+}
+
+#banda-quote cite {
+  font-family: var(--font-mono);
+  font-style: normal;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--stone);
+}
+
+#timeline {
+  background: #FBF8F0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 3.5rem 1.5rem;
+}
+
+#learn-more {
+  text-align: center;
+  padding: 3rem 1.5rem 4rem;
+}
+
+/* ---------- Class selectors ---------- */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--lion-red);
+  margin-bottom: 0.75rem;
+}
+
+.portrait-frame {
+  max-width: 260px;
+  margin: 2.75rem auto 0;
+}
+
+.portrait {
+  border: 6px solid #ffffff;
+  outline: 1px solid var(--line);
+  box-shadow: 0 18px 30px -14px rgba(23, 20, 15, 0.35);
+  border-radius: 2px;
+}
+
+.caption {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--stone);
+  letter-spacing: 0.02em;
+  margin-top: 0.75rem;
+  line-height: 1.4;
+}
+
+.bio {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem 3.5rem;
+}
+
+.bio p {
+  font-size: 1.05rem;
+}
+
+.founding-figure {
+  font-weight: 600;
+  font-style: italic;
+  color: var(--lion-green);
+}
+
+.timeline ol {
+  max-width: 700px;
+  margin: 2rem auto 0;
+}
+
+.timeline li {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 1.25rem;
+  padding: 1rem 0;
+  border-bottom: 1px dashed var(--line);
+}
+
+.timeline li:last-child { border-bottom: none; }
+
+.timeline .year {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+  color: var(--lion-red);
+}
+
+.timeline .event { font-size: 1rem; }
+
+.seal {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--stone);
+  padding-top: 1.5rem;
+}
+
+footer {
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--stone);
+  letter-spacing: 0.03em;
+  padding: 1.5rem 1rem 2.5rem;
+  border-top: 1px solid var(--line);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 520px) {
+  .timeline li {
+    grid-template-columns: 1fr;
+    gap: 0.35rem;
+  }
+}
